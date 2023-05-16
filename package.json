@@ -1,6 +1,6 @@
 {
   "name": "@veelit/capacitor-ussd-manager",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The plugin allows the use of several ussd features on Android",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
