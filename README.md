@@ -68,8 +68,6 @@ callUssd(options: { value: string; }) => Promise<{ result: string; code: string;
 
 ---
 
-`</docgen-api>``
-
 ### Example Usage
 
 ```typescript
