@@ -1,6 +1,6 @@
 {
   "name": "@veelit/capacitor-ussd-manager",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The plugin allows the use of the `Android TelephonyManager UssdResponseCallBack` method to dial ussd short codes programmatically and get the response text asynchronously",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -17,10 +17,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/veelit/ussd-manager.git"
+    "url": "git+https://github.com/veelit/capacitor-ussd-manager.git"
   },
   "bugs": {
-    "url": "https://github.com/veelit/ussd-manager/issues"
+    "url": "https://github.com/veelit/capacitor-ussd-manager/issues"
   },
   "keywords": [
     "capacitor",
