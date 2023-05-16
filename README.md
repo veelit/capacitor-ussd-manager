@@ -1,11 +1,11 @@
-# @veelit/ussd-manager
+# capacitor-ussd-manager
 
-The plugin allows the use of several ussd features on Android
+The plugin allows the use of several ussd features on Android via the TelephonyManager service. You can dial ussd short codes and get a response asynchronously. Note that this only supports USSD codes that are not session based (i.e where user input is not required after dialling the code).
 
 ## Install
 
 ```bash
-npm install @veelit/ussd-manager
+npm install @veelit/capacitor-ussd-manager
 npx cap sync
 ```
 
@@ -13,9 +13,9 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
-* [`requestUssdPermission()`](#requestussdpermission)
-* [`callUssd(...)`](#callussd)
+- [`echo(...)`](#echo)
+- [`requestUssdPermission()`](#requestussdpermission)
+- [`callUssd(...)`](#callussd)
 
 </docgen-index>
 
@@ -34,8 +34,7 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
 
---------------------
-
+---
 
 ### requestUssdPermission()
 
@@ -43,8 +42,7 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 requestUssdPermission() => Promise<void>
 ```
 
---------------------
-
+---
 
 ### callUssd(...)
 
@@ -58,6 +56,22 @@ callUssd(options: { value: string; }) => Promise<{ result: string; code: string;
 
 **Returns:** <code>Promise&lt;{ result: string; code: string; }&gt;</code>
 
---------------------
+---
 
-</docgen-api>
+</docgen-api>`
+
+### Example Usage
+
+```typescript
+import { UssdManager } from '@veelit/capacitor-ussd-manager';
+
+const callUssdCode = async (shortCode: string) => {
+  try {
+    await UssdManager.requestUssdPermission();
+    const res = await UssdManager.callUssd({ value: shortCode });
+    setUssdResponse(res);
+  } catch (error: any) {
+    setUssdResponse(JSON.parse(error?.message));
+  }
+};
+```

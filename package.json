@@ -11,7 +11,7 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "VeelitUssdManager.podspec"
+    "VeelitCapacitorUssdManager.podspec"
   ],
   "author": "r2g",
   "license": "MIT",
