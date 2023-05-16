@@ -1,12 +1,22 @@
 # capacitor-ussd-manager
 
-The plugin allows the use of several ussd features on Android via the TelephonyManager service. You can dial ussd short codes and get a response asynchronously. Note that this only supports USSD codes that are not session based (i.e where user input is not required after dialling the code).
+The plugin allows the use of the `Android TelephonyManager UssdResponseCallBack` method to dial ussd short codes programmatically and get the response text asynchronously.
+
+**Note**: This only supports USSD codes that are not session based (i.e where user input is not required after dialling the code).
 
 ## Install
 
 ```bash
 npm install @veelit/capacitor-ussd-manager
 npx cap sync
+```
+
+## Permissions
+
+Add the following permission to your `AndroidManifest.xml`
+
+```
+<uses-permission android:name="android.permission.CALL_PHONE" />
 ```
 
 ## API
@@ -28,11 +38,11 @@ npx cap sync
 echo(options: { value: string; }) => Promise<{ value: string; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param         | Type                                |
+| ------------- | ----------------------------------- |
+| **`options`** | `<code>`{ value: string; }`</code>` |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** `<code>`Promise&lt;{ value: string; }&gt;`</code>`
 
 ---
 
@@ -50,15 +60,13 @@ requestUssdPermission() => Promise<void>
 callUssd(options: { value: string; }) => Promise<{ result: string; code: string; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param         | Type                                |
+| ------------- | ----------------------------------- |
+| **`options`** | `<code>`{ value: string; }`</code>` |
 
-**Returns:** <code>Promise&lt;{ result: string; code: string; }&gt;</code>
+**Returns:** `<code>`Promise&lt;{ result: string; code: string; }&gt;`</code>`
 
 ---
-
-</docgen-api>`
 
 ### Example Usage
 
