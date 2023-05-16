@@ -23,9 +23,9 @@ Add the following permission to your `AndroidManifest.xml`
 
 <docgen-index>
 
-- [`echo(...)`](#echo)
-- [`requestUssdPermission()`](#requestussdpermission)
-- [`callUssd(...)`](#callussd)
+* [`echo(...)`](#echo)
+* [`requestUssdPermission()`](#requestussdpermission)
+* [`callUssd(...)`](#callussd)
 
 </docgen-index>
 
